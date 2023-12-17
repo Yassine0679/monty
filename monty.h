@@ -43,11 +43,11 @@ extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
 
 /*file operations*/
-void openFile(char *file_name);
+void open_file(char *file_name);
 int parse_line(char *buffer, int line_number, int format);
-void readFile(FILE *);
+void read_file(FILE *);
 int len_chars(FILE *);
-void findFunc(char *, char *, int, int);
+void find_func(char *, char *, int, int);
 
 /*Stack operations*/
 stack_t *create_node(int n);
@@ -76,9 +76,9 @@ void print_str(stack_t **, unsigned int);
 void rotl(stack_t **, unsigned int);
 
 /*Error hanlding*/
-void _err(int error_code, ...);
-void moreErr(int error_code, ...);
-void stringErr(int error_code, ...);
+void err(int error_code, ...);
+void more_err(int error_code, ...);
+void string_err(int error_code, ...);
 void rotr(stack_t **, unsigned int);
 
 #endif
